@@ -14,7 +14,7 @@ class ProductsController extends Controller
     public function index()
     {
         //muesta una coleccion del recurso
-        $products = Product::all();
+        $products = Product::paginate(15);
         return view('products.index',['products' => $products]);
     }
 
@@ -64,6 +64,9 @@ class ProductsController extends Controller
     public function show($id)
     {
         // muestra un recurso - producto
+        $product = Product::find($id);
+
+        return view('products.show',['product'=>$product]);
     }
 
     /**
