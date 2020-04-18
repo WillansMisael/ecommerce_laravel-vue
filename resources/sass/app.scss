@@ -1,0 +1,16 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.app-form > div{
+    margin-top: 1em;
+}
+
+.card.padding{
+    padding: 1em;
+}
