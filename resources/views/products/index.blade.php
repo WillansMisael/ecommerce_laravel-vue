@@ -9,7 +9,7 @@
                     <header>
                         <h2 class="card-title">
                             <a href="/productos/{{$product->id}}">
-                            {{ $product->title}}    
+                            {{ $product->title }}    
                             </a>
                         </h2>
                         <h4 class="card-subtitle">{{ $product->price }}</h4>
