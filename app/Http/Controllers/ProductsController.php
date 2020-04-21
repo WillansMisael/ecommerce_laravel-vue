@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-<<<<<<< HEAD
 use App\Http\Resources\ProductsCollection; 
-=======
-use App\Http\Resources\ProductsCollection;
->>>>>>> a54af0937e32c96c356f689a0f51134142952ce3
 
 class ProductsController extends Controller
 {
@@ -23,19 +19,11 @@ class ProductsController extends Controller
     public function index(Request $request)
     {
         //muesta una coleccion del recurso
-<<<<<<< HEAD
         $products = Product::all();
 
         if($request->wantsJson()){
             return new ProductsCollection($products);
         }
-=======
-        $products = Product::paginate(15);
-        
-        if($request->wantsJson()){
-            return new ProductsCollection($products);
-        }     
->>>>>>> a54af0937e32c96c356f689a0f51134142952ce3
         return view('products.index',['products' => $products]);
     }
 

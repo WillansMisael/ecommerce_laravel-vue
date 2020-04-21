@@ -1942,10 +1942,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     product: {
@@ -1961,9 +1957,41 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/products/ProductsComponent.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/vagrant/Projects_Laravel/ecommerce/resources/js/components/products/ProductsComponent.vue: Unexpected token (15:0)\n\n\u001b[0m \u001b[90m 13 | \u001b[39m            \u001b[36mreturn\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m                name\u001b[33m:\u001b[39m \u001b[32m'Product Component'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m                products\u001b[33m:\u001b[39m []\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m                products\u001b[33m:\u001b[39m [\u001b[0m\n    at Parser._raise (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:742:17)\n    at Parser.raiseWithData (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:735:17)\n    at Parser.raise (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:729:17)\n    at Parser.unexpected (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:8757:16)\n    at Parser.parseIdentifierName (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10748:18)\n    at Parser.parseIdentifier (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10726:23)\n    at Parser.parseMaybePrivateName (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10079:19)\n    at Parser.parsePropertyName (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10550:126)\n    at Parser.parseObjectMember (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10451:10)\n    at Parser.parseObj (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10374:25)\n    at Parser.parseExprAtom (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9995:28)\n    at Parser.parseExprSubscripts (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Parser.parseMaybeUnary (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9582:21)\n    at Parser.parseExprOps (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9452:23)\n    at Parser.parseMaybeConditional (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9425:23)\n    at Parser.parseMaybeAssign (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9380:21)\n    at Parser.parseExpression (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9332:23)\n    at Parser.parseReturnStatement (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11448:28)\n    at Parser.parseStatementContent (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11129:21)\n    at Parser.parseStatement (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11081:17)\n    at Parser.parseBlockOrModuleBlockBody (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11656:25)\n    at Parser.parseBlockBody (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11642:10)\n    at Parser.parseBlock (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:11626:10)\n    at Parser.parseFunctionBody (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10634:24)\n    at Parser.parseFunctionBodyAndFinish (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10617:10)\n    at Parser.parseMethod (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10579:10)\n    at Parser.parseObjectMethod (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10495:19)\n    at Parser.parseObjPropValue (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10537:23)\n    at Parser.parseObjectMember (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10461:10)\n    at Parser.parseObj (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:10374:25)\n    at Parser.parseExprAtom (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9995:28)\n    at Parser.parseExprSubscripts (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Parser.parseMaybeUnary (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9582:21)\n    at Parser.parseExprOps (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9452:23)\n    at Parser.parseMaybeConditional (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9425:23)\n    at Parser.parseMaybeAssign (/home/vagrant/Projects_Laravel/ecommerce/node_modules/@babel/parser/lib/index.js:9380:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      name: 'Product Component',
+      products: [],
+      endpoint: "/productos"
+    };
+  },
+  created: function created() {
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {
+      var _this = this;
+
+      axios.get(this.endpoint).then(function (response) {
+        console.log(response.data.data);
+        _this.products = response.data.data;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -37369,17 +37397,11 @@ var render = function() {
         _c("h2", { staticClass: "card-title" }, [
           _vm._v(_vm._s(_vm.product.title))
         ]),
-        _vm._v("\n<<<<<<< HEAD\n                "),
+        _vm._v(" "),
         _c("h4", { staticClass: "card-subtitle" }, [
           _vm._v(_vm._s(_vm.product.humanprice))
         ]),
-        _vm._v("\n=======\n                "),
-        _c("h4", { staticClass: "card-subtitle" }, [
-          _vm._v(_vm._s(_vm.product.price))
-        ]),
-        _vm._v(
-          "\n>>>>>>> a54af0937e32c96c356f689a0f51134142952ce3\n                "
-        ),
+        _vm._v(" "),
         _c("p", { staticClass: "card-text" }, [
           _vm._v(_vm._s(_vm.product.description))
         ])
