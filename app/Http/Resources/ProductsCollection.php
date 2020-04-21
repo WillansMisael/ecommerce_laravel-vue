@@ -27,4 +27,8 @@ class ProductsCollection extends ResourceCollection
             })
         ];
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a54af0937e32c96c356f689a0f51134142952ce3
