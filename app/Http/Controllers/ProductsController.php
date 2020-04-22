@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ShoppingCart;
 use App\Http\Resources\ProductsCollection; 
 
 class ProductsController extends Controller
@@ -18,13 +19,25 @@ class ProductsController extends Controller
      */
     public function index(Request $request)
     {
+        //identificando la session
+        $sessionName = 'shopping_cart_id';
+        $shopping_cart_id = $request->session()->get($sessionName);
+        // o session($sessionName);
+        // o \Session::get($sessionName);
+        $shopping_cart = ShoppingCart::findOrCreateById($shopping_cart_id);
+        $request->session()->put($sessionName, $shopping_cart->id);
+
         //muesta una coleccion del recurso
         $prodPag = Product::paginate(2);
         $products = Product::all();
         if($request->wantsJson()){
             return new ProductsCollection($products);
         }
-        return view('products.index',['products' => $products,'prodPag'=> $prodPag]);
+        return view('products.index',[
+            'products' => $products,
+            'prodPag'=> $prodPag,
+            'shopping_cart' => $shopping_cart
+        ]);
     }
 
     /**
