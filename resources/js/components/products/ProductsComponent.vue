@@ -8,7 +8,7 @@
             @enter="enter"
             @leave="leave"
             class="row">
-           <product-card-component :key="product.id" v-bind:product="product" v-for="product in products"> 
+           <product-card-component :key="product.id" :data-index="index" v-bind:product="product" v-for="(product, index) in products"> 
            </product-card-component>
         </transition-group>
     </section>
@@ -33,16 +33,18 @@
                     this.products = response.data.data;
                 });
             },
+            /*animaciones a los componentes*/
             beforeEnter(el){
                 el.style.opacity = 0;
                 el.style.transform = "scale(0)";
                 el.style.transition = "all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)";
             },
             enter(el){
+                const delay = 200 * el.dataset.index;
                 setTimeout(()=>{
                     el.style.opacity = 1;
                     el.style.transform = "scale(1)";
-                }, 300)
+                },delay)
             },
             leave(el){
                 el.style.opacity = 0;

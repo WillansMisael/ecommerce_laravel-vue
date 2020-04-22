@@ -1997,16 +1997,19 @@ __webpack_require__.r(__webpack_exports__);
         _this.products = response.data.data;
       });
     },
+
+    /*animaciones a los componentes*/
     beforeEnter: function beforeEnter(el) {
       el.style.opacity = 0;
       el.style.transform = "scale(0)";
       el.style.transition = "all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)";
     },
     enter: function enter(el) {
+      var delay = 200 * el.dataset.index;
       setTimeout(function () {
         el.style.opacity = 1;
         el.style.transform = "scale(1)";
-      }, 300);
+      }, delay);
     },
     leave: function leave(el) {
       el.style.opacity = 0;
@@ -37467,10 +37470,10 @@ var render = function() {
             leave: _vm.leave
           }
         },
-        _vm._l(_vm.products, function(product) {
+        _vm._l(_vm.products, function(product, index) {
           return _c("product-card-component", {
             key: product.id,
-            attrs: { product: product }
+            attrs: { "data-index": index, product: product }
           })
         }),
         1
