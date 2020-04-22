@@ -21,4 +21,8 @@ Auth::routes();
 
 Route::resource('productos','ProductsController');
 
+Route::resource("in_shopping_carts","ProductInShoppingCartsController",[
+    "only" => ["store","destroy"]
+]);
+
 Route::get('/home', 'HomeController@index')->name('home');

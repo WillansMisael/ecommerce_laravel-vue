@@ -64,5 +64,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         //este es nuestri middleware
         'first.user' => \App\Http\Middleware\ValidateFirstUserSignUp::class,
+        'shopping_cart' => \App\Http\Middleware\SetShoppingCart::class,
     ];
 }
