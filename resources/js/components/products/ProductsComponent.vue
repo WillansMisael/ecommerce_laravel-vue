@@ -1,16 +1,10 @@
 <template>
     <section>
-        <transition-group 
-            tag="div"
-            :css="false"
-            name="fadeIn"
-            @before-enter="beforeEnter"
-            @enter="enter"
-            @leave="leave"
-            class="row">
-           <product-card-component :key="product.id" :data-index="index" v-bind:product="product" v-for="(product, index) in products"> 
+        <material-transition-group tag="div" class="row">
+           <product-card-component :key="product.id" :data-index="index" v-bind:product="product" 
+           v-for="(product,index) in products"> 
            </product-card-component>
-        </transition-group>
+        </material-transition-group>
     </section>
 </template>
 
@@ -32,23 +26,6 @@
                     console.log(response.data.data);
                     this.products = response.data.data;
                 });
-            },
-            /*animaciones a los componentes*/
-            beforeEnter(el){
-                el.style.opacity = 0;
-                el.style.transform = "scale(0)";
-                el.style.transition = "all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)";
-            },
-            enter(el){
-                const delay = 200 * el.dataset.index;
-                setTimeout(()=>{
-                    el.style.opacity = 1;
-                    el.style.transform = "scale(1)";
-                },delay)
-            },
-            leave(el){
-                el.style.opacity = 0;
-                el.style.transform = "scale(0)";
             }
         }
     }

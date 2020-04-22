@@ -1920,6 +1920,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/*componente funcional*/
+/* harmony default export */ __webpack_exports__["default"] = ({
+  functional: true,
+  render: function render(createElement, context) {
+    var data = _objectSpread({}, context.data, {
+      css: false,
+      on: {
+        /*animaciones a los componentes*/
+        beforeEnter: function beforeEnter(el) {
+          el.style.opacity = 0;
+          el.style.transform = "scale(0)";
+          el.style.transition = "all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)";
+        },
+        enter: function enter(el) {
+          var delay = 200 * el.dataset.index;
+          setTimeout(function () {
+            el.style.opacity = 1;
+            el.style.transform = "scale(1)";
+          }, delay);
+        },
+        leave: function leave(el) {
+          var delay = 200 * el.dataset.index;
+          setTimeout(function () {
+            el.style.opacity = 0;
+            el.style.transform = "scale(0)";
+          }, delay);
+        }
+      }
+    });
+
+    return createElement('transition-group', data, context.children);
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/products/ProductCardComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/products/ProductCardComponent.vue?vue&type=script&lang=js& ***!
@@ -1971,12 +2022,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1996,24 +2041,6 @@ __webpack_require__.r(__webpack_exports__);
         console.log(response.data.data);
         _this.products = response.data.data;
       });
-    },
-
-    /*animaciones a los componentes*/
-    beforeEnter: function beforeEnter(el) {
-      el.style.opacity = 0;
-      el.style.transform = "scale(0)";
-      el.style.transition = "all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1)";
-    },
-    enter: function enter(el) {
-      var delay = 200 * el.dataset.index;
-      setTimeout(function () {
-        el.style.opacity = 1;
-        el.style.transform = "scale(1)";
-      }, delay);
-    },
-    leave: function leave(el) {
-      el.style.opacity = 0;
-      el.style.transform = "scale(0)";
     }
   }
 });
@@ -37424,7 +37451,7 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("h4", { staticClass: "card-subtitle" }, [
-          _vm._v(_vm._s(_vm.product.humanprice))
+          _vm._v(_vm._s(_vm.product.humanPrice))
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "card-text" }, [
@@ -37460,16 +37487,8 @@ var render = function() {
     "section",
     [
       _c(
-        "transition-group",
-        {
-          staticClass: "row",
-          attrs: { tag: "div", css: false, name: "fadeIn" },
-          on: {
-            "before-enter": _vm.beforeEnter,
-            enter: _vm.enter,
-            leave: _vm.leave
-          }
-        },
+        "material-transition-group",
+        { staticClass: "row", attrs: { tag: "div" } },
         _vm._l(_vm.products, function(product, index) {
           return _c("product-card-component", {
             key: product.id,
@@ -49674,6 +49693,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('products-component', __webpack_require__(/*! ./components/products/ProductsComponent.vue */ "./resources/js/components/products/ProductsComponent.vue")["default"]);
 Vue.component('product-card-component', __webpack_require__(/*! ./components/products/ProductCardComponent.vue */ "./resources/js/components/products/ProductCardComponent.vue")["default"]);
+Vue.component('material-transition-group', __webpack_require__(/*! ./components/animation/MaterialCollectionComponent.vue */ "./resources/js/components/animation/MaterialCollectionComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49797,6 +49817,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/animation/MaterialCollectionComponent.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/animation/MaterialCollectionComponent.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MaterialCollectionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MaterialCollectionComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _MaterialCollectionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/animation/MaterialCollectionComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterialCollectionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MaterialCollectionComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animation/MaterialCollectionComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterialCollectionComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

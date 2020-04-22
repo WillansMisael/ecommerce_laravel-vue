@@ -19,12 +19,12 @@ class ProductsController extends Controller
     public function index(Request $request)
     {
         //muesta una coleccion del recurso
+        $prodPag = Product::paginate(2);
         $products = Product::all();
-
         if($request->wantsJson()){
             return new ProductsCollection($products);
         }
-        return view('products.index',['products' => $products]);
+        return view('products.index',['products' => $products,'prodPag'=> $prodPag]);
     }
 
     /**

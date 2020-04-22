@@ -8,7 +8,7 @@
         <div class="row">
         </div>
         <div class="actions text-center">
-
+            {{ $prodPag->links() }}
         </div>
     </div>
 @endsection
