@@ -14,4 +14,15 @@ class ShoppingCart extends Model
             return ShoppingCart::create();
         }
     }
+    public function products()
+    {       
+        //orm para relacionar muchos a muchos primero va la tabla 
+        //con la que tiene relacion y luego la tabla que los relaciona
+        return $this->belongsToMany('App\Product','product_in_shopping_carts');
+    }
+
+    public function productsCount()
+    {       
+        return $this->products()->count();
+    }
 }
