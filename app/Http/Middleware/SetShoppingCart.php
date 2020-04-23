@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\ShoppingCart;
 
 class SetShoppingCart
 {
@@ -23,7 +24,7 @@ class SetShoppingCart
         
         \Session::put($sessionName, $shopping_cart->id);
         
-        $request->$shopping_cart = $shopping_cart;
+        $request->shopping_cart = $shopping_cart;
         return $next($request);
     }
 }
