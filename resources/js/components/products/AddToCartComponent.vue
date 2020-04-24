@@ -23,7 +23,8 @@
                         'Content-Type': 'application/json'
                     }
                 }).then(()=>{
-                    console.log('Se agrego el producto');
+                    //llamando la mutacion
+                    return store.commit("increment");
                 })
             }
         }

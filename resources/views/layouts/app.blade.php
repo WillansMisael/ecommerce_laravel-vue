@@ -41,7 +41,7 @@
                         <!-- Authentication Links -->
                         <!-- Carritos de compra -->
                             <li class="nav-link">
-                                {{ $productsCount }}
+                                <product-counter-component :count="{{ $productsCount }}"></product-counter-component>
                             </li>
                         <!-- Carritos de compra -->
                         

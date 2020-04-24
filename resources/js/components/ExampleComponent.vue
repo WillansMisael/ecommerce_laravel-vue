@@ -1,5 +1,5 @@
 <template>
- <p>Mi primer componente Example</p>
+    <p>Mi primer componente Example</p>
 </template>
 
 <script>
