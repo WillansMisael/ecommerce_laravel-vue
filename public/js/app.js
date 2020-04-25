@@ -2147,6 +2147,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2156,6 +2168,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.fetchProducts();
+  },
+  computed: {
+    total: function total() {
+      var cents = this.products.reduce(function (acumulator, currentObj) {
+        return acumulator + currentObj.numberPrice;
+      }, 0);
+      return "$".concat(cents / 100);
+    }
   },
   methods: {
     fetchProducts: function fetchProducts() {
@@ -37708,33 +37728,60 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "material-transition-group",
-    { attrs: { tag: "div" } },
-    _vm._l(_vm.products, function(product, index) {
-      return _c(
-        "article",
-        { key: product.id, attrs: { "data-index": index } },
-        [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-10" }, [
-              _c("strong", [_vm._v(_vm._s(product.title))])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-2" }, [
-              _vm._v(
-                " \n                " +
-                  _vm._s(product.humanPrice) +
-                  "\n            "
-              )
-            ])
+    "div",
+    [
+      _c(
+        "material-transition-group",
+        { attrs: { tag: "div" } },
+        _vm._l(_vm.products, function(product, index) {
+          return _c(
+            "article",
+            { key: product.id, attrs: { "data-index": index } },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-10" }, [
+                  _c("strong", [_vm._v(_vm._s(product.title))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _vm._v(
+                    " \n                    " +
+                      _vm._s(product.humanPrice) +
+                      "\n                "
+                  )
+                ])
+              ])
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("article", { staticClass: "total card-product" }, [
+        _c("hr"),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-2" }, [
+            _vm._v("\n        " + _vm._s(_vm.total) + "\n        ")
           ])
-        ]
-      )
-    }),
-    0
+        ])
+      ])
+    ],
+    1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-10" }, [
+      _c("strong", [_vm._v("Total")])
+    ])
+  }
+]
 render._withStripped = true
 
 
